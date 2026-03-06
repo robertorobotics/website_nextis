@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/contexts/ToastContext";
@@ -22,6 +23,21 @@ export default function HardwarePage() {
     const { t } = useLanguage();
     const { showToast } = useToast();
     const [submitting, setSubmitting] = useState(false);
+    const [activeSlide, setActiveSlide] = useState(0);
+    const galleryRef = useRef(null);
+
+    const handleScroll = useCallback(() => {
+        const el = galleryRef.current;
+        if (!el) return;
+        const index = Math.round(el.scrollLeft / el.offsetWidth);
+        setActiveSlide(index);
+    }, []);
+
+    function scrollToSlide(index) {
+        const el = galleryRef.current;
+        if (!el) return;
+        el.scrollTo({ left: index * el.offsetWidth, behavior: "smooth" });
+    }
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -92,6 +108,61 @@ export default function HardwarePage() {
                         {t.hardware.openSourceTeaser}
                     </p>
                 </motion.div>
+            </section>
+
+            {/* Gallery */}
+            <section className="bg-white pb-16">
+                <div className="max-w-4xl mx-auto px-6">
+                    <div
+                        ref={galleryRef}
+                        onScroll={handleScroll}
+                        className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth"
+                        style={{
+                            scrollbarWidth: "none",
+                            msOverflowStyle: "none",
+                            WebkitOverflowScrolling: "touch",
+                        }}
+                    >
+                        <div className="snap-center shrink-0 w-full">
+                            <Image
+                                src="/images/hardware/aira-in-action.webp"
+                                alt="AIRA follower arm and leader arm on workbench"
+                                width={1600}
+                                height={1156}
+                                className="w-full rounded-lg"
+                                sizes="(max-width: 768px) 100vw, 1024px"
+                                priority
+                            />
+                        </div>
+                        <div className="snap-center shrink-0 w-full">
+                            <Image
+                                src="/images/hardware/aira-follower.webp"
+                                alt="AIRA follower arm close-up showing actuators and gripper"
+                                width={1290}
+                                height={1705}
+                                className="w-full rounded-lg"
+                                sizes="(max-width: 768px) 100vw, 1024px"
+                            />
+                        </div>
+                    </div>
+                    <div className="flex justify-center gap-2 mt-4">
+                        {[0, 1].map((i) => (
+                            <button
+                                key={i}
+                                onClick={() => scrollToSlide(i)}
+                                aria-label={`Go to image ${i + 1}`}
+                                className={`w-2 h-2 rounded-full transition-colors ${
+                                    activeSlide === i
+                                        ? "bg-gray-900"
+                                        : "bg-gray-300"
+                                }`}
+                            />
+                        ))}
+                    </div>
+                    <p className="text-center text-gray-400 mt-3 text-sm">
+                        {t.hardware.galleryCaption}
+                    </p>
+                </div>
             </section>
 
             {/* What You Get */}

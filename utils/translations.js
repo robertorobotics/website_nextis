@@ -89,6 +89,7 @@ export const translations = {
             countryPlaceholder: "Shipping country",
             submit: "Request Kit",
             formSuccess: "Request sent. We will be in touch.",
+            galleryCaption: "Shown: open-source edition (3D-printed). Kit ships in CNC aluminum.",
         },
         home: {
             hardwareCta: "Want to build with our hardware?",
@@ -185,6 +186,7 @@ export const translations = {
             countryPlaceholder: "Versandland",
             submit: "Kit anfragen",
             formSuccess: "Anfrage gesendet. Wir melden uns.",
+            galleryCaption: "Gezeigt: Open-Source-Version (3D-gedruckt). Kit wird in CNC-Aluminium geliefert.",
         },
         home: {
             hardwareCta: "Mit unserer Hardware bauen?",
