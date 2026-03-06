@@ -44,7 +44,7 @@ The site is bright, clean, alive. White background. The aesthetic is confident p
 
 - Mobile-first. Most visitors come from Twitter/X, LinkedIn, and YC on phones.
 - One idea per viewport section. Don't cram.
-- Navigation should be minimal and elegant. A fixed header with: Home, Blog, and a CTA.
+- Navigation should be minimal and elegant. A fixed header with: Home, Hardware, Blog, and a CTA.
 - The landing page communicates: what we build, why it matters, one clear action.
 - Footer: minimal. Copyright, social links, contact email.
 
@@ -65,6 +65,7 @@ The site has these pages:
 1. **Home** (/) — Hero, Problem, Product, Vision, X Feed, Contact/Waitlist
 2. **Blog** (/blog) — Index of all posts. The manifesto is the first post. New posts added over time.
 3. **Blog Post** (/blog/[slug]) — Individual blog post page.
+4. **Hardware** (/hardware) — Product page for the AIRA Teleop Kit (follower arm + leader arm sold as a set). Built-to-order, CNC aluminum construction. No product images on launch. Sells on specs, positioning, and the request form.
 
 ## Content Rules
 
@@ -76,14 +77,15 @@ Content that should exist:
 - X/Twitter feed section: curated posts from our X account showing daily updates, videos, demos.
 - Waitlist/Contact: email signup with optional task description for serious inquiries.
 - Blog: the manifesto as the first post, with ability to add more.
+- Hardware page: AIRA Teleop Kit product listing. CNC aluminum dual-arm teleoperation kit. Damiao follower arm + Dynamixel XL330 leader arm + aluminum frame. Price, specs, what's included, lead time, and a request form. No placeholder images, no stock photos. Real product photos will be added once the aluminum reference unit is built. No competitor comparisons or mentions. Let the product speak for itself.
 
 Content that must NOT exist:
 - "Trusted by" logos (unless we have real customers).
 - Fake testimonials or placeholder quotes.
 - "Our values" grid with icons.
 - "How it works" in three illustrated steps.
-- Pricing page.
 - Job listings page.
+- Competitor comparison tables or mentions of other products by name.
 
 ## AI Writing Tells to Avoid
 

@@ -13,11 +13,11 @@ const geistSans = Geist({
 export const metadata = {
   title: "Nextis — Building the Universal Constructor",
   description: "Autonomous robotic assembly. Teach a task once, run it forever. Dual-arm, vision-guided, learns from demonstration.",
-  metadataBase: new URL("https://website-nextis.vercel.app"),
+  metadataBase: new URL("https://www.nextis.tech"),
   openGraph: {
     title: "Nextis — Building the Universal Constructor",
     description: "Autonomous robotic assembly. Teach a task once, run it forever.",
-    url: "https://website-nextis.vercel.app",
+    url: "https://www.nextis.tech",
     siteName: "Nextis",
     locale: "en_US",
     type: "website",

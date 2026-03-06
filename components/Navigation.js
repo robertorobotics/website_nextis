@@ -57,6 +57,13 @@ export default function Navigation() {
 
                 <div className="hidden md:flex items-center gap-6">
                     <Link
+                        href="/hardware"
+                        className="text-gray-600 hover:text-gray-900 transition-colors"
+                        style={{ fontSize: "var(--text-small)" }}
+                    >
+                        {t.nav.hardware}
+                    </Link>
+                    <Link
                         href="/blog"
                         className="text-gray-600 hover:text-gray-900 transition-colors"
                         style={{ fontSize: "var(--text-small)" }}
@@ -108,6 +115,14 @@ export default function Navigation() {
                 } bg-white/95 backdrop-blur-sm`}
             >
                 <div className="px-6 py-4 flex flex-col gap-4">
+                    <Link
+                        href="/hardware"
+                        className="text-gray-600 hover:text-gray-900 transition-colors"
+                        style={{ fontSize: "var(--text-small)" }}
+                        onClick={() => setMobileOpen(false)}
+                    >
+                        {t.nav.hardware}
+                    </Link>
                     <Link
                         href="/blog"
                         className="text-gray-600 hover:text-gray-900 transition-colors"
