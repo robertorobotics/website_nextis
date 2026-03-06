@@ -52,7 +52,7 @@ export async function POST(request) {
         }
 
         await resend.emails.send({
-            from: 'onboarding@resend.dev',
+            from: 'Nextis <r.gonzalez@nextis.tech>',
             to: notifyEmail,
             subject: taskDescription ? 'New Automation Request' : 'New Waitlist Signup',
             html: htmlContent

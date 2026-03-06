@@ -51,7 +51,7 @@ export async function POST(request) {
         }
 
         await resend.emails.send({
-            from: 'onboarding@resend.dev',
+            from: 'Nextis <r.gonzalez@nextis.tech>',
             to: notifyEmail,
             subject: 'New Hardware Kit Request',
             html: htmlContent
